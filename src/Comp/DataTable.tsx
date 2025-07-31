@@ -44,7 +44,7 @@ const DTable = () => {
 
   const onPageChange = (e: any) => {
     setPage(e.page);
-    fetchData(e.page, e.rows);
+    //fetchData(e.page, e.rows);
   };
 
   const onSelectionChange = async (e: any) => {
