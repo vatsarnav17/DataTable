@@ -21,7 +21,7 @@ const DTable = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState<Table[]>([]);
-  const [isSelecting, setIsSelecting] = useState(false); // New state for loading spinner
+  const [isSelecting, setIsSelecting] = useState(false);
 
   const fetchData = async (page: number, rows: number) => {
     setLoading(true);
@@ -143,7 +143,7 @@ const DTable = () => {
                     if (inputField) {
                       const fieldCount = parseInt(inputField.value, 10);
                       if (!isNaN(fieldCount) && fieldCount > 0) {
-                        setIsSelecting(true); // Show loading spinner
+                        setIsSelecting(true); 
                         let remainingFields = fieldCount;
                         let currentPage = 0;
                         const selected = [];
@@ -165,7 +165,7 @@ const DTable = () => {
                         }
 
                         setSelectedProducts(selected);
-                        setIsSelecting(false); // Hide loading spinner
+                        setIsSelecting(false); 
                       }
                     }
                   }}
